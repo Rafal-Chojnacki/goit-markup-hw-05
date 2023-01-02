@@ -25,15 +25,17 @@
                     <span class="logo1">Web</span><span class="logo2header">Studio</span></a>
                 <nav class="header-nav">
                     <div class="header-nav-subpages">
-                        <ul class="ul">
+                        <ul class="ul-header">
                             <li class="li-header">
                                 <a class="link-active" href="index.html" title="WebStudio">Agencja</a>
                             </li>
                             <li class="li-header">
                                 <a class="link-header" href="portfolio.html" title="Portfolio WebStudio">Portfolio</a>
+                                <div class="link-underline"></div>
                             </li>
                             <li class="li-header">
                                 <a class="link-header" href="kontakt.html" title="Kontakt">Kontakt</a>
+                                <div class="link-underline"></div>
                             </li>
                         </ul>
                     </div>
@@ -57,7 +59,8 @@
         <div class="main-index">
             <section class="section">
                 <h1 class="h1index">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-                <button class="btn-index" type="button">Zamów usługę</button>
+                <button class="btn-index" type="button" data-modal-open>Zamów usługę</button>
+                <div class="modal"></div>
             </section>
         </div>
     </header>
@@ -142,9 +145,9 @@
                     </li>
                     <li class="li-our-work">
                         <div class="image-our-work">
-                        <img src="./images/colours.jpg"
-                            alt="creative artist web design with working colour selection graphic tablet" width="370"
-                            height="294">
+                            <img src="./images/colours.jpg"
+                                alt="creative artist web design with working colour selection graphic tablet"
+                                width="370" height="294">
                             <div class="our-work-text-background">
                                 <P class="our-work-text">rozwiązania graficzne</P>
                             </div>
@@ -462,6 +465,16 @@
             </div>
         </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal-window">
+            <button type="button" class="btn-close" data-modal-close>
+                <svg class="icon-close">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
