@@ -446,12 +446,12 @@ img {
 }
 @keyframes slide-up {
 	from {
-		padding-top: 200px;
-		height: 294px;
+		top: 294px;
+		height: 0;
 	}
 	to {
-		padding-bottom: 49px;
-		height: 294px;
+		top: 0;
+		height: 70%;
 	}
 }
 
