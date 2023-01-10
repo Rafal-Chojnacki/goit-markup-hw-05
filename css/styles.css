@@ -445,6 +445,10 @@ img {
 	letter-spacing: 0.06em;
 }
 .project-type {
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+	text-align: left;
 	color: #757575;
 	padding-top: 4px;
 	padding-bottom: 20px;
