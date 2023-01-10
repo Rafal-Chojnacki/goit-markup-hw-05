@@ -370,9 +370,10 @@ img {
 }
 .li-portfolio {
 	line-height: 26px;
-	position: relative;
+	width: 370px;
+	height: 404px;
+	border: 1px solid #eeeeee;
 }
-
 .subpages-portfolio {
 	height: 38px;
 	font-size: 14px;
@@ -380,15 +381,49 @@ img {
 	margin: 4px;
 	float: left;
 }
-.portfolio-photos {
-	width: 370px;
-	height: 404px;
-	padding: 15px;
+.portfolio-image {
+	width: auto;
+	height: 294px;
+	position: relative;
+	overflow: hidden;
 }
 .figure-portfolio {
 	margin: 0;
-	height: 404px;
-	border: 1px solid #eeeeee;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.photo-portfolio {
+	width: auto;
+	height: 294px;
+	position: relative;
+	overflow: hidden;
+}
+.text-portfolio {
+	background: #2196f3e5;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.03em;
+	text-align: left;
+	margin: 0;
+	padding: 49px 45px 0px 24px;
+	width: 100%;
+	height: 295.333px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: block;
+	visibility: hidden;
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.li-portfolio:hover .text-portfolio {
+	transform: translateY(0);
+	cursor: pointer;
+	visibility: visible;
 	overflow: hidden;
 }
 .li-portfolio:hover {
@@ -401,57 +436,6 @@ img {
 	width: 370px;
 	padding-left: 24px;
 	margin-top: 14px;
-}
-.paragraf-portfolio {
-	margin: 0;
-}
-.text-portfolio {
-	background: #2196f3e5;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 28px;
-	letter-spacing: 0.03em;
-	text-align: left;
-	padding: 49px 45px 49px 24px;
-	width: auto;
-	height: 294px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-}
-
-.figure-portfolio:hover + .text-portfolio {
-	animation-duration: 250ms;
-	animation-name: slide-up;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
-	overflow: hidden;
-	visibility: visible;
-	
-}
-.text-portfolio:hover {
-	animation-duration: 250ms;
-	animation-name: slide-up;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
-	overflow: hidden;
-	visibility: visible;
-}
-@keyframes slide-up {
-	from {
-		top: 110px;
-		height: 0px;
-	}
-	to {
-		top: 0px;
-		height: 294px;
-	}
 }
 
 .project-name {
@@ -513,12 +497,13 @@ img {
 	margin: auto;
 	display: none;
 }
-
 .link-header:hover + .link-underline {
 	display: block;
+	transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
-.ul-header .li-header .link-header:hover + .ul-header .li-header .link-underline-active {
-	display: none;
+.link-header:focus + .link-underline {
+	display: block;
+	transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .footer-all {
 	display: flex;
