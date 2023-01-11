@@ -149,13 +149,29 @@ img {
 	border-radius: 50%;
 	position: relative;
 }
-.link-circle-social-media:hover,
-.link-circle-social-media:focus {
+.personal-social-media-link:hover > .link-circle-social-media ,
+.personal-social-media-link:focus > .link-circle-social-media {
+	background-color: #2196f3;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.personal-social-media-link:hover > .link-circle-social-media > svg,
+.personal-social-media-link:focus > .link-circle-social-media > svg {
+	fill: #fff;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-clients:hover > .icon-rectangle-clients,
+.link-clients:focus > .icon-rectangle-clients {
+	border: 1px solid #2196f3;
+	fill: #2196f3;
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-media-link:hover > .link-footer-circle-social-media,
+.social-media-link:focus > .link-footer-circle-social-media {
 	background-color: #2196f3;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-circle-social-media:hover > svg,
-.link-circle-social-media:focus > svg {
+.social-media-link:hover > .link-footer-circle-social-media > svg,
+.social-media-link:focus > .link-footer-circle-social-media > svg {
 	fill: white;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -178,12 +194,7 @@ img {
 	fill: #afb1b8;
 	position: relative;
 }
-.icon-rectangle-clients:hover,
-.icon-rectangle-clients:focus {
-	border: 1px solid #2196f3;
-	fill: #2196f3;
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .icon-client {
 	width: 106px;
 	height: 60px;
@@ -222,9 +233,10 @@ img {
 	height: 581px;
 	background: #ffffff;
 	box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
-	position: absolute;
+	position: sticky;
 	z-index: 1;
 	top: 221px;
+	left: 536px;
 	right: 536px;
 	bottom: 222px;
 	right: 536px;
